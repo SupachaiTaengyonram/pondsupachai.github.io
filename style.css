@@ -1,0 +1,219 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #f7a01c; /* สีส้มทอง: เน้นความเด่น */
+    --secondary-color: #3f0000; /* สีแดงเข้ม: เน้นความแข็งแกร่ง */
+    --background-dark: #1a1a1a; /* พื้นหลังดำเข้ม */
+    --text-light: #ffffff; /* สีข้อความหลัก */
+    --font-heading: 'Chakra Petch', sans-serif; /* ฟอนต์เท่ๆ สำหรับหัวข้อ */
+    --font-body: 'Kanit', sans-serif; /* ฟอนต์ไทยอ่านง่าย */
+    --card-bg: #2b2b2b; /* สีพื้นหลัง Card */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.highlight-text {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* --- Header & Hero Section --- */
+.hero {
+    background: url('https://picsum.photos/1920/600?grayscale') center/cover no-repeat; /* เปลี่ยนเป็นรูปพื้นหลังเท่ๆ แนวชายแท้ */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* Overlay ให้ข้อความเด่นขึ้น */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); 
+}
+
+.hero-content {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.student-info {
+    font-size: 1.1em;
+    display: block;
+    margin-top: 10px;
+    color: #cccccc;
+}
+
+#online-status {
+    color: #4CAF50; /* สีเขียวสำหรับ Online */
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+
+/* --- Main Content & Sections --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section {
+    background-color: var(--card-bg);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Interest Section (Grid Layout) --- */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.interest-card {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #444;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.interest-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+/* --- Game Image Styling (สำหรับ Sword of Justice) --- */
+.game-image-wrapper {
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color);
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.game-image-wrapper:hover .game-image {
+    transform: scale(1.05); /* ลูกเล่นซูมเมื่อเมาส์ชี้ */
+}
+
+.game-status {
+    display: block;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 5px;
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+/* --- Skill Section --- */
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: #333333;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-level {
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.high-level {
+    background-color: #28a745; /* เขียว */
+    color: var(--text-light);
+}
+
+.low-level {
+    background-color: #dc3545; /* แดง */
+    color: var(--text-light);
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #aaaaaa;
+}
+
+/* --- Animation/Keyframes --- */
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+    }
+    20%, 24%, 55% {
+        opacity: 0.5;
+        text-shadow: none;
+    }
+}
+
+/* ลูกเล่นกระพริบสำหรับสถานะ Online */
+#online-status {
+    animation: flicker 2s infinite step-end;
+}
