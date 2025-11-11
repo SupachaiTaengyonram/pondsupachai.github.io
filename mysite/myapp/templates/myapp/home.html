@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mr. Supachai's Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="bg-gradient-to-r from-purple-500 to-indigo-500 p-6 text-center">
+        <h1 class="text-4xl font-bold">Welcome to Mr. Supachai's Space</h1>
+        <p class="text-lg mt-2">Exploring the universe of Data Science, Novels, and Pets</p>
+    </header>
+
+    <main class="p-6">
+        <section class="text-center">
+            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+            <p class="text-lg">Hi, I'm <span class="font-bold">Mr. Supachai Taengyonram</span> (66114540739). I am currently a junior year student at <span class="font-bold">Ubon Ratchathani University</span>, majoring in <span class="font-bold">Data Science</span>. I love my dog, my cat, and diving into the world of fancy novels.</p>
+        </section>
+
+        <section class="mt-10 text-center">
+            <h2 class="text-3xl font-semibold mb-4">My Interests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Data Science</h3>
+                    <p class="mt-2">Exploring data, building models, and uncovering insights.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Pets</h3>
+                    <p class="mt-2">Spending time with my beloved dog and cat.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Fancy Novels</h3>
+                    <p class="mt-2">Immersing myself in captivating stories and adventures.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10 text-center">
+            <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+            <form class="bg-gray-800 p-6 rounded-lg shadow-lg inline-block" hx-post="/contact" hx-swap="outerHTML">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium">Your Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 p-2 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium">Your Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 p-2 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                </div>
+                <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 p-4 text-center mt-10">
+        <p>&copy; 2025 Mr. Supachai Taengyonram. All rights reserved.</p>
+    </footer>
+</body>
+</html>
